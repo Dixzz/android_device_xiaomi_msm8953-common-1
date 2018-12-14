@@ -98,6 +98,10 @@ vendor.display.disable_skip_validate=1 \
 vendor.display.rotator_downscale=1 \
 vendor.display.perf_hint_window=50
 
+# Always use GPU for screen compositing
+PRODUCT_PROPERTY_OVERRIDES += \
+debug.sf.disable_hwc=1
+
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
 drm.service.enabled=true
