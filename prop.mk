@@ -96,7 +96,9 @@ ro.sf.lcd_density=420 \
 vendor.gralloc.enable_fb_ubwc=1 \
 vendor.display.disable_skip_validate=1 \
 vendor.display.rotator_downscale=1 \
-vendor.display.perf_hint_window=50
+vendor.display.perf_hint_window=50 \
+sdm.debug.disable_rotator_split=1 \
+sdm.perf_hint_window=50
 
 # Always use GPU for screen compositing
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -210,3 +212,7 @@ persist.sys.usb.config.extra=none
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \
 wifi.interface=wlan0
+
+# Fix Cast/Miracast
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.sys.wfd.virtual=0
